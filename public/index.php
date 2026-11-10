@@ -158,7 +158,6 @@ $app->get('/lancamentos/{id}', function (Request $req, Response $res, array $arg
     return $json($res, $lancamentos[$id]);
 });
 
-// RF09 – Atualizar
 $app->put('/lancamentos/{id}', function (Request $req, Response $res, array $args)
     use (&$lancamentos, $categorias, $validarLancamento, $json) {
     $id = (int) $args['id'];
@@ -180,7 +179,6 @@ $app->put('/lancamentos/{id}', function (Request $req, Response $res, array $arg
     return $json($res, $lancamentos[$id]);
 });
 
-// RF10 – Excluir
 $app->delete('/lancamentos/{id}', function (Request $req, Response $res, array $args)
     use (&$lancamentos, $json) {
     $id = (int) $args['id'];
@@ -190,11 +188,6 @@ $app->delete('/lancamentos/{id}', function (Request $req, Response $res, array $
     return $res->withStatus(204);
 });
 
-/* =========================================================
-   RESUMO FINANCEIRO — RF14 e RF15
-   ========================================================= */
-
-// RF14 – Saldo atual
 $app->get('/resumo/saldo', function (Request $req, Response $res)
     use ($lancamentos, $json) {
     $receitas = 0.0; $despesas = 0.0;
@@ -209,7 +202,6 @@ $app->get('/resumo/saldo', function (Request $req, Response $res)
     ]);
 });
 
-// RF15 – Totais por período
 $app->get('/resumo/periodo', function (Request $req, Response $res)
     use ($lancamentos, $json) {
     $q = $req->getQueryParams();
