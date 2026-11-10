@@ -135,7 +135,6 @@ $app->post('/lancamentos', function (Request $req, Response $res)
     return $json($res, $lancamentos[$id], 201);
 });
 
-/
 $app->get('/lancamentos', function (Request $req, Response $res)
     use ($lancamentos, $json) {
     $q = $req->getQueryParams();
