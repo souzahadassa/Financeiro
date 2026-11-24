@@ -1,10 +1,10 @@
 # 💰 Web Service de Controle Financeiro Pessoal
 
-API REST desenvolvida em **PHP + Slim Framework 4** para gerenciar receitas, despesas, categorias e acompanhar o saldo financeiro pessoal.
+API REST para gerenciar receitas, despesas, categorias e acompanhar o saldo financeiro pessoal.
 
 ---
 
-## 📋 Sumário
+## Sumário
 
 - [Sobre o projeto](#-sobre-o-projeto)
 - [Tecnologias](#-tecnologias)
@@ -19,7 +19,7 @@ API REST desenvolvida em **PHP + Slim Framework 4** para gerenciar receitas, des
 
 ---
 
-## 🎯 Sobre o projeto
+## Sobre o projeto
 
 Este web service permite que qualquer aplicação (web ou mobile) realize as operações básicas de um sistema de controle financeiro pessoal:
 
@@ -30,7 +30,7 @@ Este web service permite que qualquer aplicação (web ou mobile) realize as ope
 
 ---
 
-## 🛠 Tecnologias
+## Tecnologias
 
 - **PHP 8.1+**
 - **Slim Framework 4** — microframework REST
@@ -39,7 +39,7 @@ Este web service permite que qualquer aplicação (web ou mobile) realize as ope
 
 ---
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 controle-financeiro/
@@ -54,7 +54,7 @@ controle-financeiro/
 
 ---
 
-## ⚙️ Instalação
+## Instalação
 
 ### Pré-requisitos
 
@@ -79,7 +79,7 @@ composer install
 
 ---
 
-## ▶️ Executando a API
+## ▶Executando a API
 
 O Slim pode ser servido diretamente pelo servidor embutido do PHP:
 
@@ -98,7 +98,7 @@ curl http://localhost:8080/status
 
 ---
 
-## 🧪 Executando os testes
+## Executando os testes
 
 Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** para cada endpoint.
 
@@ -115,9 +115,9 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 
 ---
 
-## 🔌 Endpoints
+##  Endpoints
 
-### 🏷️ Categorias
+###  Categorias
 
 | Método | Rota | Descrição | RF |
 |---|---|---|---|
@@ -127,7 +127,7 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 | `PUT` | `/categorias/{id}` | Atualizar categoria | RF04 |
 | `DELETE` | `/categorias/{id}` | Excluir categoria | RF05 |
 
-### 💸 Lançamentos
+### Lançamentos
 
 | Método | Rota | Descrição | RF |
 |---|---|---|---|
@@ -146,14 +146,14 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 | `categoria_id` | Filtrar por categoria | RF12 |
 | `tipo` | `receita` ou `despesa` | RF13 |
 
-### 📊 Resumo financeiro
+### Resumo financeiro
 
 | Método | Rota | Descrição | RF |
 |---|---|---|---|
 | `GET` | `/resumo/saldo` | Saldo atual (receitas − despesas) | RF14 |
 | `GET` | `/resumo/periodo` | Totais por período | RF15 |
 
-### ❤️ Healthcheck
+### Healthcheck
 
 | Método | Rota | Descrição |
 |---|---|---|
@@ -161,7 +161,7 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 
 ---
 
-## 📐 Regras de negócio
+##  Regras de negócio
 
 | Código | Regra |
 |---|---|
@@ -173,7 +173,7 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 
 ---
 
-## 📌 Códigos de status HTTP
+## Códigos de status HTTP
 
 | Código | Significado | Quando ocorre |
 |---|---|---|
@@ -185,7 +185,7 @@ Os testes cobrem **sucesso**, **erro de validação** e **recurso inexistente** 
 
 ---
 
-## 🧩 Exemplos de uso
+## Exemplos de uso
 
 ### 1. Cadastrar categoria
 
@@ -330,7 +330,7 @@ curl -X DELETE http://localhost:8080/categorias/1
 
 ---
 
-## 📝 Observações
+## Observações
 
 - Os dados são mantidos **em memória** (arrays associativos). Ao reiniciar a API, o estado volta ao inicial — comportamento aceitável para fins didáticos.
 - Todos os corpos de requisição e resposta são **JSON**.
@@ -338,7 +338,7 @@ curl -X DELETE http://localhost:8080/categorias/1
 
 ---
 
-## 👤 Autor
+##  Autor
 
 Avaliativa individual da disciplina de Web Services.
 

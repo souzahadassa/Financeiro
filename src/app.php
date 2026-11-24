@@ -116,7 +116,6 @@ $validarLancamento = function (array $d, array $categorias): array {
     return $erros;
 };
 
-// RF06 – Cadastrar
 $app->post('/lancamentos', function (Request $req, Response $res)
     use (&$lancamentos, &$proxLan, $categorias, $validarLancamento, $json) {
     $d = (array) $req->getParsedBody();
