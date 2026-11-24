@@ -340,7 +340,7 @@ curl -X DELETE http://localhost:8080/categorias/1
 
 ## 👤 Autor
 
-Desenvolvido como atividade avaliativa individual da disciplina de Web Services.
+Avaliativa individual da disciplina de Web Services.
 
 **Nome:** Hadassa Maria Souza
-**GitHub:** [@hadassasouza](https://github.com/hadassasouza)
+**GitHub:** [@hadassasouza](https://github.com/souzahadassa/)
